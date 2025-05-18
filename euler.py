@@ -27,39 +27,8 @@ def sim_Euler(k,J,r,M,b,h,tmax,u_t):
     for i in range(0, steps, interval):
         print(f"{i * h:.1f}  {x[i,0]:.3f}  {x[i,1]:.3f}")
         
-    # Dislay last value
+    # Display last value
     print(f"{(steps-1) * h:.1f}  {x[(steps-1),0]:.3f}  {x[(steps-1),1]:.3f}")
-    
+
     return x
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# plt.plot([0, 1, 2], [0, 1, 4])
-# plt.title('Test plot')
-# plt.xlabel('x axis')
-# plt.ylabel('y axis')
-# plt.grid(True)
-# plt.show()
 

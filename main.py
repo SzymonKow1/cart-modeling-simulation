@@ -1,4 +1,5 @@
 from euler import sim_Euler
+from rk4 import sim_rk4
 from tkinter import *
 from tkinter import messagebox
 
@@ -75,7 +76,7 @@ def start_sim():
         if method.get() == 0:
             sim_Euler(k, J, r, M, b, h, tmax, u_t)
         else:
-            # TODO : run Runge-Kutta method     
+            sim_rk4(k, J, r, M, b, h, tmax, u_t)
             pass           
     except ValueError:
         messagebox.showerror("Error", "invalid input")
