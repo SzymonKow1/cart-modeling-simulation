@@ -107,7 +107,7 @@ def start_sim():
         tmax = float(e_tmax.get())
         amp = float(e_amplitude.get())
         freq = float(e_frequency.get())
-        signal_type = signal.get()
+        signal_type = str(signal.get())
 
         if method.get() == 0:
             sim_Euler(k, J, r, M, b, h, tmax, amp, freq, signal_type)
