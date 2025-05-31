@@ -10,10 +10,12 @@ cd cart-modeling-simulation
 python -m venv venv
 ```
 In PyCharm Professional:  
+```
 file->settings->project->Python Interpreter->Add Interpreter  
 ->Add Local Interpreter->Select existing-> ~/cart-modeling-simulation/venv/Scripts/python.exe
+```
 ---
 ## Install Libraries
 ```bash
-pip install matplotlib
+pip install matplotlib numpy scipy
 ```
