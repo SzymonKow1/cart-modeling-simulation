@@ -112,8 +112,8 @@ def start_sim():
         steps = int(tmax / h) + 1
         input_signal = signal_generator(signal_type, amp, freq, tmax, steps)
 
-        [e_x, e_v] = sim_Euler(A, B, k, J, r, M, b, h, steps, input_signal)
-        [rk4_x, rk4_v] = sim_rk4(A, B, k, J, r, M, b, h, steps, input_signal)
+        [e_x, e_v] = sim_Euler(A, B, h, steps, input_signal)
+        [rk4_x, rk4_v] = sim_rk4(A, B, h, steps, input_signal)
 
 
         plt.figure(figsize=(9, 16))

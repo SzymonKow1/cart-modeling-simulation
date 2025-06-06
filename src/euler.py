@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def sim_Euler(A, B, k, J, r, M, b, h, steps, input_signal):
+def sim_Euler(A, B, h, steps, input_signal):
 
     x0 = np.array([0, 0])
     x = np.zeros((steps, 2))
