@@ -21,15 +21,6 @@ tmax = 10
 amplitude = 1
 frequency = 1
 
-# state space model
-A = np.array([
-    [0, 1],
-    [k / ((J / (r ** 2)) - M), -b / (r ** 2 * ((J / (r ** 2)) - M))]
-])
-B = np.array([
-    [0],
-    [-1 / ((J / (r ** 2)) - M)]
-])
 
 root = Tk()
 root.title("cart-modeling-simulation")
@@ -108,6 +99,15 @@ def start_sim():
         amp = float(e_amplitude.get())
         freq = float(e_frequency.get())
         signal_type = str(signal.get())
+
+        A = np.array([
+            [0, 1],
+            [k / ((J / (r ** 2)) - M), -b / (r ** 2 * ((J / (r ** 2)) - M))]
+        ])
+        B = np.array([
+            [0],
+            [-1 / ((J / (r ** 2)) - M)]
+        ])
 
         steps = int(tmax / h) + 1
         input_signal = signal_generator(signal_type, amp, freq, tmax, steps)
